@@ -1,0 +1,59 @@
+.new_stocks button
+{
+ background-color: #4A4A4A;
+ color: #ffffff;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 1em;
+ height: 3.5em;
+ padding: 1em;
+ text-align: center;
+ width: 5.5em;
+ border-radius: 1em;
+}
+.new_stocks input
+{
+ font-size: 1em;
+ padding: 1em;
+ width: 40%;
+ border-radius: 5em;
+ background-color: #CCCDE8;
+}
+#newstocks{
+  background-color:white;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 30%;
+  background-color: #CCCDE8;
+}
+table#t02 {
+  width: 60%;
+  background-color: orange;
+}
+td:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.button {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#val{
+  background-color: #CCCDE8;
+}

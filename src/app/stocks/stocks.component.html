@@ -1,0 +1,37 @@
+<div class="new_stocks">
+  <input name="" value="" type="text" placeholder="Search stock you want to predict" #companyName/>
+  <button type="button" name="button" (click)="this.getStock(companyName.value)" >Search </button>
+</div>
+<br>
+<h3>Stock Value</h3>
+<div class="currentStock">
+  <table id="t01" border-style="solid">
+    <tr *ngIf ="this.currentStock !== undefined">
+      <td><span> {{this.currentStock.companyName}}</span></td>
+      <td *ngFor="let v of this.currentStock.stockValues.split(',')">{{v}}</td>
+    </tr>
+  </table>
+</div>
+<br>
+<h3 align="center">Past Searches </h3>
+<div class="pastStock" align="center">
+  <table id="t02">
+    <tr>
+      <th align="center">Company Name
+      <th align="center">Stock Values
+      <th align="center">Search Time
+      <th align="center">Details
+    </tr>
+    <tr *ngFor ="let pastCompany of this.pastStock">
+        <td #companyName><span>{{pastCompany.companyName}}</span></td>
+        <span><td *ngFor="let v of (pastCompany.stockValues).split(',')" align="center">{{v}}</td></span>
+        <td *ngIf="pastCompany.searchTime !== null">{{pastCompany.searchTime}}</td>
+        <td><span><a href="#" class="button">Details</a></span></td>
+    </tr>
+</table>
+</div>
+<br>
+<div class="Value"align="center">
+  <h3>Stock Value of recent viewed Company</h3>
+  <td id="val"*ngFor="let v of this.currentStock.stockValues.split(',')">{{v}}</td>
+</div>
